@@ -28,3 +28,4 @@ D:\Projects\Reactivities\Persistence\obj\Debug\net9.0\Persistence.dll
 D:\Projects\Reactivities\Persistence\obj\Debug\net9.0\refint\Persistence.dll
 D:\Projects\Reactivities\Persistence\obj\Debug\net9.0\Persistence.pdb
 D:\Projects\Reactivities\Persistence\obj\Debug\net9.0\ref\Persistence.dll
+D:\Projects\Reactivities\Persistence\obj\Debug\net9.0\Persistence.sourcelink.json
