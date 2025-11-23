@@ -1,39 +1,30 @@
-import { List, ListItem, ListItemText, Typography } from '@mui/material';
-import  {  useEffect, useState } from 'react';
-import axios from 'axios';
+import { List, ListItem, ListItemText, Typography } from "@mui/material";
+import axios from "axios";
+import { useEffect, useState } from "react"
 
 function App() {
-
   const [activities, setActivities] = useState<Activity[]>([]);
 
   useEffect(() => {
-    console.log('Fetching activities...');
     axios.get<Activity[]>('https://localhost:5001/api/activities')
-      .then(response => {
-        console.log('Activities received:', response.data);
-        setActivities(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching activities:', error);
-      });
-  }, [])
+      .then(response => setActivities(response.data))
 
-  const title = 'Reactivities';
+    return () => {}
+  }, [])
 
   return (
     <>
-      <Typography variant='h3'>{title}</Typography>
+      <Typography variant='h3'>Reactivities</Typography>
       <List>
-        {activities.map(activity => (
+        {activities.map((activity) => (
           <ListItem key={activity.id}>
             <ListItemText>{activity.title}</ListItemText>
           </ListItem>
         ))}
       </List>
     </>
+
   )
 }
-
-
 
 export default App
